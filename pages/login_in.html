@@ -4,27 +4,87 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="../css/main.min.css">
 </head>
 <body>
-    <div class="container">
+    <div class="top">
+        <div class="container__sm">
+            <div class="top__content">
+                <p class="top__text">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%! <a href="#"
+                        class="top__link">ShopNow</a></p>
+            </div>
+            <div class="top__actions">
+                <ul class="top__language-list">
+                    <li class="top__language-item">
+                        English <i class="fa-solid fa-angle-down"></i>
+                        <ul class="top__language-sublist">
+                            <li class="top__language-subitem">Russian</li>
+                            <li class="top__language-subitem">Spanish</li>
+                            <li class="top__language-subitem">French</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <header class="header">
+      <div class="container">
+        <nav class="navbar">
+            <a href="#" class="navbar__logo">Exclusive</a>
+            <ul class="navbar__collection">
+                <li class="navbar__item"><a href="#" class="navbar__link">Home</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">Contact</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">About</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link">Sign in</a></li>
+            </ul>
+            <div class="navbar__actions">
+                <form action="" class="navbar__form">
+                    <input type="text" name="" class="navbar__form-input" placeholder="What are you looking for?">
+                    <button class="navbar__form-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+                <div class="navbar__wishlist">
+                    <i class="fa-regular fa-heart"></i>
+                    <span class="navbar__wishlist-count">0</span>
+                </div>
+                <div class="navbar__cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="navbar__cart-count">0</span>
+                </div>
+                <div class="navbar__account">
+                    <i class="fa-regular fa-user"></i>
+                </div>
+                
+            </div>
+        </nav>
+      </div>
+    </header>
+    <hr class="header__line">
+    
         <div class="login__form__content">
             <div class="image-section">
                 <img src="../assets/phoen.png" alt="Shopping Cart">
             </div>
             <div class="form-section">
-                <h1>Create an account</h1>
-                <p>Enter your details below</p>
-                <form>
-                    <input type="text" placeholder="Name" required>
-                    <input type="email" placeholder="Email or Phone Number" required>
-                    <input type="password" placeholder="Password" required>
-                    <button type="submit" class="btn-primary">Create Account</button>
-                    <button type="button" class="btn-google">Sign up with Google</button>
+                <h1 class="login__title">Log in to Exclusive</h1>
+                <p class="login__text">Enter your details below</p>
+                <form class="login__form">
+                    <input type="text" placeholder="Username" class="username-field">
+                    <input type="password" placeholder="Password" class="password-field">
+                    <div class="actions">
+                        <button class="login__btn">Log in</button>
+                        <p class="forget-password">Forget Password?</p>
+                    </div>
                 </form>
-                <p class="footer-text">Already have an account? <a href="#">Log in</a></p>
+               
+
             </div>
         </div>
-    </div>
+   
+        
+
+        <script src="../scripts/login.js"></script>
 </body>
 </html>

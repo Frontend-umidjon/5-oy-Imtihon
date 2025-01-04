@@ -1,80 +1,172 @@
-.recommendation{
-    margin-top: 105px;
-    display: grid;
-    place-items: center;
-   .container{
-    background: linear-gradient(180deg, #000000, #1a1a1a);
-      height: 500px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-   }
-   &__content{
-      display: flex;
-      flex-direction: column;
-      gap: 32px;
-      margin-left: 56px;
-   }
-   &__name{
-      font-weight: 600;
-      font-size: 16px;
-      line-height: 20px;
-      color: #00FF66;
-   }
-   &__title{
-      font-weight: 600;
-      font-size: 48px;
-      line-height: 60px;
-      letter-spacing: 4%;
-      color: #fff;
-      max-width: 442px;
-   }
-   &__timer{
-      display: flex;
-      align-items: center;
-      gap: 24px;
-      
-      
-      span{
-        background-color: #fff;
-        width: 62px;
-        height: 62px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        
-        color: #000;
+.recommendation {
+   margin-top: 105px;
+   display: grid;
+   place-items: center;
+}
 
-        h1{
-            font-weight: 600;
-            font-size: 16px;
-            line-height: 20px;
-        }
-        p{
-            font-weight: 400;
-            font-size: 11px;
-            line-height: 18px;
-        }
-      }  
+.recommendation .container {
+   background: linear-gradient(180deg, #000000, #1a1a1a);
+   height: 500px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   width: 100%;
+   padding: 0 56px;
+   box-sizing: border-box;
+}
+
+.recommendation__content {
+   display: flex;
+   flex-direction: column;
+   gap: 32px;
+   max-width: 442px;
+}
+
+.recommendation__name {
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 20px;
+   color: #00FF66;
+}
+
+.recommendation__title {
+   font-weight: 600;
+   font-size: 48px;
+   line-height: 60px;
+   letter-spacing: 4%;
+   color: #fff;
+   max-width: 442px;
+}
+
+.recommendation__timer {
+   display: flex;
+   align-items: center;
+   gap: 24px;
+}
+
+.recommendation__timer span {
+   background-color: #fff;
+   width: 62px;
+   height: 62px;
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   color: #000;
+   text-align: center;
+}
+
+.recommendation__timer span h1 {
+   font-weight: 600;
+   font-size: 16px;
+   line-height: 20px;
+}
+
+.recommendation__timer span p {
+   font-weight: 400;
+   font-size: 11px;
+   line-height: 18px;
+}
+
+.recommendation__action button {
+   padding: 16px 48px;
+   border: none;
+   border-radius: 4px;
+   background: #00FF66;
+   color: #FAFAFA;
+   font-weight: 500;
+   font-size: 16px;
+   line-height: 24px;
+   cursor: pointer;
+   transition: background-color 0.3s ease;
+}
+
+.recommendation__action button:hover {
+   background: #00CC52;
+}
+
+.recommendation__image {
+   margin-right: 44px;
+   max-width: 100%;
+   height: auto;
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+   .recommendation .container {
+       flex-direction: column;
+       height: auto;
+       padding: 24px;
    }
-   &__action{
-    button{
-      padding: 16px 48px;
-      border: none;
-      border-radius: 4px;
-      background: #00FF66;
-      color: #FAFAFA;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 24px;
-      cursor: pointer;
-    }
+
+   .recommendation__content {
+       align-items: center;
+       text-align: center;
+       margin: 0;
    }
-   &__image{
-    margin-right: 44px;
-   
-    
+
+   .recommendation__title {
+       font-size: 36px;
+       line-height: 48px;
+   }
+
+   .recommendation__timer {
+       justify-content: center;
+       gap: 16px;
+   }
+
+   .recommendation__action button {
+       padding: 12px 36px;
+   }
+
+   .recommendation__image {
+       margin: 0;
+       margin-top: 24px;
+   }
+}
+
+@media (max-width: 768px) {
+   .recommendation__title {
+       font-size: 28px;
+       line-height: 36px;
+   }
+
+   .recommendation__timer span {
+       width: 50px;
+       height: 50px;
+   }
+
+   .recommendation__timer span h1 {
+       font-size: 14px;
+   }
+
+   .recommendation__timer span p {
+       font-size: 10px;
+   }
+}
+
+@media (max-width: 480px) {
+   .recommendation__title {
+       font-size: 24px;
+       line-height: 32px;
+   }
+
+   .recommendation__timer span {
+       width: 40px;
+       height: 40px;
+   }
+
+   .recommendation__timer span h1 {
+       font-size: 12px;
+   }
+
+   .recommendation__timer span p {
+       font-size: 9px;
+   }
+
+   .recommendation__action button {
+       padding: 10px 24px;
+       font-size: 14px;
    }
 }

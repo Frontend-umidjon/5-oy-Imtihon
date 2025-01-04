@@ -3,6 +3,8 @@ const productsCollectionEl = document.querySelector(".products__list");
 const loadingEl = document.querySelector(".category__loading");
 const loadingEl2 = document.querySelector(".products__loading");
 const btnSeeMore = document.querySelector(".products__btn");
+const searchInput = document.querySelector(".navbar__form-input");
+const searchDropdown = document.querySelector(".search__drop");
 const BASE_URL = "https://dummyjson.com";
 let totalProducts = 0;
 let productEndpoint = "/products";
@@ -69,6 +71,8 @@ async function fetchProducts(endpoint) {
       totalProducts = res.total;
       if (totalProducts <= perPageCount + (offset * perPageCount)) {
         btnSeeMore.style.display = "none";
+      }else{
+        btnSeeMore.style.display = "block";
       }
     })
     .catch((err) => console.log(err))
@@ -86,6 +90,7 @@ function createProduct(data) {
   data.products.forEach((product) => {
     const productEl = document.createElement("div");
     productEl.classList.add("products__item");
+    productEl.dataset.id = product.id;
     productEl.innerHTML = `
        <div class="products__item__image">
                         <img src="${product.images[0]}" alt="">
@@ -110,6 +115,7 @@ function createProduct(data) {
 }
 
 btnSeeMore.addEventListener("click", () => {
+
   btnSeeMore.setAttribute("disabled", true);
   btnSeeMore.style.cursor = "not-allowed";
   btnSeeMore.style.opacity = "0.5";
@@ -121,3 +127,47 @@ btnSeeMore.addEventListener("click", () => {
 
 
 });
+
+productsCollectionEl.addEventListener("click", (e) => {
+  const id = e.target.closest(".products__item").dataset.id;
+  if (e.target.closest(".products__item__image")) {
+    open(`../pages/details.html?id=${id}`, "_self");
+
+  }
+
+})
+
+searchInput.addEventListener("keyup", async (e)=>{
+  const value = e.target.value.trim()
+  if(value){
+      searchDropdown.style.display = "block"
+      const response = await fetch(`${BASE_URL}/products/search?q=${value}&limit=5`)
+      response
+          .json()
+          .then(res => {
+              searchDropdown.innerHTML = null
+              res.products.forEach((item)=>{
+                  const divEl = document.createElement("div")
+                  divEl.className = "search__item"
+                  divEl.dataset.id = item.id
+                  divEl.innerHTML = `
+                  <img src=${item.thumbnail} alt="">
+                  <div>
+                       <p>${item.title}</p>
+                  </div>
+                  `
+                  searchDropdown.appendChild(divEl)
+              })
+          })
+          .catch(err => console.log(err))
+  }else{
+      searchDropdown.style.display = "none"
+  }
+})
+searchDropdown.addEventListener("click", (e)=>{
+  console.log(e.target.dataset.id);
+  
+ if(e.target.closest(".search__item")){
+     open(`./pages/details.html?id=${e.target.closest(".search__item").dataset.id}`, "_self");
+ }
+})

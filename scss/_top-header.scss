@@ -80,3 +80,10 @@
         transform: rotate(180deg);
     }
 }
+
+@media (max-width: 768px){
+    .top{
+        display: none;
+    }
+    
+}
