@@ -1,0 +1,184 @@
+.products{
+    margin-top: 64px;
+    &__content{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    &__title{
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 20px;
+        color: #DB4444;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        span{
+            width: 20px;
+            height: 40px;
+            border-radius: 4px;
+            background-color: #DB4444;
+        }
+    }
+    &__slider{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap : 8px;
+        
+
+
+        button{
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: #E5E5E5;
+            border: none;
+
+            i{
+                font-size: 20px;
+            }
+        }
+    }
+    &__list{
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+    &__item{
+        margin-top: 40px;
+        max-width: 270px;
+        height: 322px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        position: relative;
+
+        &__image{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #F5F5F5;
+            padding: 35px 0px;
+            border-radius:4px ;
+
+            img{
+                width: 180px;
+                height: 200px;
+            }
+        }
+        &__like{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: #fff;
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            cursor: pointer;
+
+            i{
+                font-size: 16px;
+            }
+        }
+        &__eye{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background: #fff;
+            position: absolute;
+            top: 54px;
+            right: 16px;
+            cursor: pointer;
+
+            i{
+                font-size: 16px;
+            }
+        }
+        &__name{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #000;
+        }
+        &__pricing{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        &__price{
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            color: #DB4444;
+        }
+        &__rating{
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 600;
+            color: #808080;
+        }
+    }
+    &__btn{
+        display: block;
+        margin: 0 auto;
+        padding: 16px 48px;
+        margin-top: 60px;
+        border: none;
+        border-radius: 4px;
+        background: #DB4444;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #fff;
+        cursor: pointer;
+
+    }
+    &__btn:hover{
+        background-color: #fff;
+        color: #DB4444;
+        border: 1px solid #DB4444;
+    }
+
+    &__loading{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+      margin-top: 60px;
+
+      &__item{
+        margin-top: 40px;
+        height: 322px;
+        background: linear-gradient(180deg, #F5F5F5 0%, #E5E5E5 100%);
+        border-radius: 4px;
+        animation:  loading 1.2s infinite ease-in-out;
+
+        @keyframes loading {
+            0%{
+                opacity: 1;
+            }
+            50%{
+                opacity: .5;
+            }
+            100%{
+                opacity: 1;
+            }    
+        }
+      }
+    }
+
+    
+    
+}

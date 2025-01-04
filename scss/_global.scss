@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    max-width: 1206px ;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+.container__lg{
+    max-width: 1344px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+.container__sm{
+    max-width: 896px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    overflow-x: hidden;
+    
+}
+
+
+.footer__sub__title{
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 700;
+    margin-top: 80px;
+}

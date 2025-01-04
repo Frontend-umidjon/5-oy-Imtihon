@@ -1,0 +1,162 @@
+.section-featured {
+    margin-top: 105px;
+    padding-bottom: 140px;
+
+    
+}
+.featured-strong {
+    color: #DB4444;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+}
+.featured-strong::before{
+    content: "";
+    border-radius: 4px;
+    border: 7px solid #DB4444;
+    margin-right: 10px;
+}
+
+.featured-title {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 48px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+}
+.featured-wrapper {
+    margin-bottom: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+.playstation-wrapper {
+    border-radius: 10px;
+    width: 570px;
+    padding: 460px 30px 30px;
+    background-image: url("../assets/playstadion5.png");
+    background-repeat: no-repeat;
+    background-size: 511px 511px;
+    background-color: black;
+    color: white;
+}
+.playstation-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+.playstation-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 16px;
+}
+.colletcion-wrapper {
+    border-radius: 10px;
+    background-image: url("../assets/gril.png");
+    background-repeat: no-repeat;
+    background-size: 432px 286px;
+    background-position: right;
+    color: white;
+    width: 570px;
+    background-color: black;
+    padding: 138px 24px 24px;
+    margin-bottom: 32px;
+}
+.colletcion-title {
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+.colletcion-text {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 16px;
+}
+.link-text{
+    color: white;
+    text-decoration: underline;
+}
+.contents-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.speaker-wrapper {
+    border-radius: 10px;
+    background-image: url("../assets/alisa.png");
+    background-repeat: no-repeat;
+    background-size: 210px 222px;
+    background-position: center;
+    width: 270px;
+    background-color: black;
+    padding: 175px 32px 32px;
+}
+.speaker-title {
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+.speaker-text {
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 16px;
+}
+.perfume-wrapper {
+    border-radius: 10px;
+    background-image: url("../assets/atir.png");
+    background-repeat: no-repeat;
+    background-size: 210px 222px;
+    background-position: center;
+    width: 270px;
+    padding: 175px 32px 32px;
+    background-color: black;
+}
+.perfume-title {
+    color: white;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+.perfume-text {
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 16px;
+}
+.content-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 60px;
+}
+.content-item {
+    text-align: center;
+    h3{
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+    }
+    p{
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 21px;
+    }
+}
+.content-item img{
+    margin-bottom: 24px;
+}
+.content-item h3{
+    margin-bottom: 8px;
+}
