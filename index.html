@@ -7,6 +7,7 @@
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/main.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
@@ -33,28 +34,36 @@
     <header class="header">
       <div class="container">
         <nav class="navbar">
-            <a href="#" class="navbar__logo">Exclusive</a>
+            <a href="#" class="navbar__logo"   data-aos="fade-right" data-aos-duration="2000">Exclusive</a>
             <ul class="navbar__collection">
-                <li class="navbar__item"><a href="#" class="navbar__link">Home</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link">Contact</a></li>
-                <li class="navbar__item"><a href="#" class="navbar__link">About</a></li>
-                <li class="navbar__item"><a href="./pages/login_in.html" class="navbar__link">Sign in</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link"  data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500" data-aos-duration="500" data-aos-delay="500">Home</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link"  data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500" data-aos-duration="500" data-aos-delay="700">Contact</a></li>
+                <li class="navbar__item"><a href="#" class="navbar__link"  data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500" data-aos-duration="500" data-aos-delay="900">About</a></li>
+                <li class="navbar__item"><a href="./pages/login_in.html" class="navbar__link"  data-aos="fade-down"
+                    data-aos-easing="linear"
+                    data-aos-duration="1500" data-aos-duration="500" data-aos-delay="1100">Sign in</a></li>
             </ul>
             <div class="navbar__actions">
-                <form action="" class="navbar__form">
-                    <input type="text" name="" class="navbar__form-input" placeholder="What are you looking for?">
+                <form action="" class="navbar__form" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500">
+                    <input type="text" name="" class="navbar__form-input" placeholder="What are you looking for?" >
                     <button class="navbar__form-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
                     <div class="search__drop">
                     
                     </div>
                 </form>
                 
-                <div class="navbar__wishlist">
+                <div class="navbar__wishlist" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" data-aos-delay="200">
                     <i class="fa-regular fa-heart"></i>
                     <span class="navbar__wishlist-count">0</span>
                 </div>
-                <div class="navbar__cart">
-                    <i class="fa-solid fa-cart-shopping"></i>
+                <div class="navbar__cart" data-aos="fade-down" data-aos-easing="linear" data-aos-duration="1500" data-aos-delay="400">
+                    <i class="fa-solid fa-cart-shopping" ></i>
                     <span class="navbar__cart-count">0</span>
                 </div>
                 
@@ -65,16 +74,16 @@
     <hr class="header__line">
     <section class="hero">
         <div class="container">
-            <div class="hero__image">
-                <img src="./assets/hero.png" alt="">
-            </div>
-            <div class="hero__content">
+            <div class="hero__image" data-aos="fade-zoom" data-aos-easing="linear" data-aos-duration="1500">
+                <div class="hero__content" data-aos="fade-up" data-aos-easing="linear" data-aos-duration="1500">
                 <p class="hero__name">
                 <i class="fa-brands fa-apple"></i> iPhone 14 Series
                 </p>
                 <h1 class="hero__title">Up to 10% off Voucher</h1>
                 <a href="" class="hero__link">Shop Now <i class="fa-solid fa-arrow-right"></i></a>
              </div>
+            </div>
+            
         </div>
     </section>
     <section class="category">
@@ -303,6 +312,10 @@
         </ul>
     </div>
 </footer>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="./scripts/app.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
